@@ -19,14 +19,24 @@ export class Userform extends Component {
                      });
 
                      //Go bavk to previous step
-                     nextStep = () => {
+                     prevtStep = () => {
                        const { step } = this.state;
                        this.setState({
-                         step: step + 1
+                         step: step - 1
                        });
                      };
+                 // Handle fields changes
+                 handleChange = input =>e=>{
+                     this.setState({[input]:e.target.value});
+                 }
+
+
                    } 
     render() {
+
+        const {step} = this.state;
+        const {firstName, lastName, email, occupation, city, bio} = this.state;
+        const values = { firstName, lastName, email, occupation, city, bio };
         return (
             <div>
                 
