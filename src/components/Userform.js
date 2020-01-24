@@ -18,13 +18,14 @@ export class Userform extends Component {
                        step: step + 1
                 });
 
-    //Go bavk to previous step
+    //Go back to previous step
     prevtStep = () => {
     const { step } = this.state;
     this.setState({
         step: step - 1
         });
         };
+
     // Handle fields changes
     handleChange = input =>e=>{
         this.setState({[input]:e.target.value});
