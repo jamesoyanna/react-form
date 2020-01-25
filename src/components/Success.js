@@ -1,19 +1,33 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import AppBar from "material-ui/AppBar";
+import Dialog from "@material-ui/core/Dialog";
+import AppBar from "@material-ui/core/AppBar";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 
-export class Confirm extends Component {
+export class Success extends Component {
+  continue = e => {
+    e.preventDefault();
+    // PROCESS FORM //
+    this.props.nextStep();
+  };
+
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
   render() {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title="Success" />
-          <h1>Thank You for your submission</h1>
-          <p>You will recieve an email for further details</p>
+          <Dialog open="true" fullWidth="true" maxWidth="sm">
+            <AppBar title="Success" />
+            <h1>Thank You For Your Submission</h1>
+            <p>You will get an email with further instructions</p>
+          </Dialog>
         </React.Fragment>
       </MuiThemeProvider>
     );
   }
 }
 
-export default Confirm;
+export default Success;
