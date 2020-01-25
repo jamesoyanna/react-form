@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
-
 import RaisedButton from 'material-ui/RaisedButton';
 
 export class FormUserDetail extends Component {
     continue = e =>{
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
     render() {
-        const { values} = this.props;
+        const { values } = this.props;
         return (
           <MuiThemeProvider>
             <React.Fragment>
@@ -32,15 +31,16 @@ export class FormUserDetail extends Component {
               <br />
               <TextField
                 hintText="Enter Your Email"
-                floatingLabelText="email"
+                floatingLabelText="Email"
                // onChange={handleChange("email")}
                 //defaultValue={values.email}
               />
               <br />
               <RaisedButton
-               lable= "Continue"
+               lable="Continue"
                primary = {true}
                style = {styles.button} 
+               onClick = {this.continue}
               /> 
             </React.Fragment>
           </MuiThemeProvider>
@@ -48,7 +48,7 @@ export class FormUserDetail extends Component {
     }
 }
 
- const styles = {
+const styles = {
 button:{
 nargin : 15
 }
