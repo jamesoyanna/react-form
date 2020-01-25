@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 export class FormPersonalDetail extends Component {
     render() {
          continue = e =>{
@@ -18,22 +17,22 @@ export class FormPersonalDetail extends Component {
               <TextField
                 hintText="Enter Your occupation"
                 floatingLabelText="occupation"
-                //onChange={handleChange("occupation")}
-                //defaultValue={values.occupation}
+                onChange={handleChange("occupation")}
+                defaultValue={values.occupation}
               />
               <br />
               <TextField
                 hintText="Enter Your city"
                 floatingLabelText="city"
-                //onChange={handleChange("city")}
-                //defaultValue={values.city}
+                onChange={handleChange("city")}
+                defaultValue={values.city}
               />
               <br />
               <TextField
                 hintText="Enter Your bio"
                 floatingLabelText="bio"
-                // onChange={handleChange("bio")}
-                //defaultValue={values.bio}
+                onChange={handleChange("bio")}
+                defaultValue={values.bio}
               />
               <br />
               <RaisedButton

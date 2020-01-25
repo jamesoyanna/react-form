@@ -18,22 +18,22 @@ export class FormUserDetail extends Component {
               <TextField
                 hintText="Enter Your First name"
                 floatingLabelText="First Name"
-                //onChange={handleChange("First Name")}
-                //defaultValue={values.firstName}
+                onChange={this.handleChange("First Name")}
+                defaultValue={values.firstName}
               />
               <br />
               <TextField
                 hintText="Enter Your Last name"
                 floatingLabelText="last Name"
-                //onChange={handleChange("First Name")}
-                //defaultValue={values.lastName}
+                onChange={this.handleChange("last Name")}
+                defaultValue={values.lastName}
               />
               <br />
               <TextField
                 hintText="Enter Your Email"
                 floatingLabelText="Email"
-               // onChange={handleChange("email")}
-                //defaultValue={values.email}
+               onChange={this.handleChange("email")}
+                defaultValue={values.email}
               />
               <br />
               <RaisedButton
